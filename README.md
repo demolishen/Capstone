@@ -1,6 +1,6 @@
-#Brianna's Cleaning Business/Project Overview
+# Brianna's Cleaning Business/Project Overview
 
-##Home Page/User Profile
+## Home Page/User Profile
 
 1.Registration Sign-up/User Base with Profiles containing scheduling information and more
 
@@ -10,13 +10,14 @@
 
 4.Get a response via phone/text/email or view estimate directly on the website once it's completed by Brianna
 
-##Before and After photos
+## Before and After photos
 
 1.Let clients view and upload before and after photos of completed jobs
 
 2.Display on front page somewhere to invite future prospects
 
-##About Section
+## About Section
+
 1.Brief personal history maybe, history about the business, goals of the business, etc
 
 2.Contact
@@ -29,7 +30,7 @@
 
 -Etc.
 
-#Functionality
+# Functionality
 
 > The user will be greeted by the main page but not have access to it's use without first registering/signing up for their own account
 
@@ -49,7 +50,7 @@
 
 > the user would get notified of when their estimate is completed and ready to be confirmed and paid for deposit and then final payment.
 
-> ###random maybes
+### random maybes
 
 1. some sort of review
 
