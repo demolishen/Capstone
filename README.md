@@ -1,4 +1,4 @@
-#~Brianna's Cleaning Business/Project Overview~
+#Brianna's Cleaning Business/Project Overview
 
 ##Home Page/User Profile
 
