@@ -46,49 +46,49 @@ and paid for deposit and then final payment.
 
 ## Data Models
 
-    1. PK = int(UserID) NOT NULL
+1. PK = int(UserID) NOT NULL
 
-            - Password NOT NULL = CharField
+        - Password NOT NULL = CharField
 
-            - Profile
+        - Profile
 
-                - Name NOT NULL = CharField
+            - Name NOT NULL = CharField
 
-                - Age NOT NULL = NumberField
+            - Age NOT NULL = NumberField
 
-                - Phone Number NOT NULL = NumberField
+            - Phone Number NOT NULL = NumberField
 
-                - Email NOT NULL = EmailField
+            - Email NOT NULL = EmailField
 
-                - Location NOT NULL = CharField
+            - Location NOT NULL = CharField
 
-    2. PK = int(Scheduling ID) NOT NULL
+2. PK = int(Scheduling ID) NOT NULL
 
-            - FK = int(UserID) NOT NULL 
+        - FK = int(UserID) NOT NULL 
 
-            -Location NOT NULL = CharField
+        -Location NOT NULL = CharField
 
-            -Time/Date of possible cleaning availability slots NOT NULL = DateTimeField
+        -Time/Date of possible cleaning availability slots NOT NULL = DateTimeField
 
-            -Photo section for whats being cleaned at said location (with details) NOT NULL = ImageField
+        -Photo section for whats being cleaned at said location (with details) NOT NULL = ImageField
 
-            -Type of cleaning to be performed NOT NULL = CharField(Choice Param.)
+        -Type of cleaning to be performed NOT NULL = CharField(Choice Param.)
 
-            -list of usual fees/rates NOT NULL = TextField
+        -list of usual fees/rates NOT NULL = TextField
 
-    3. PK = int(Estimate Return ID) NOT NULL
+3. PK = int(Estimate Return ID) NOT NULL
 
-            - FK = int(Scheduling ID) NOT NULL
+        - FK = int(Scheduling ID) NOT NULL
 
-            -Agreement of type of work/cost of work getting done NOT NULL = CharField
+        -Agreement of type of work/cost of work getting done NOT NULL = CharField
 
-            -Agreement of location to be worked on/in NOT NULL = CharField
+        -Agreement of location to be worked on/in NOT NULL = CharField
 
-            -Agreement of concent to enter/how and where to enter NOT NULL = TextField
+        -Agreement of concent to enter/how and where to enter NOT NULL = TextField
 
-            -Agreement of date the work is to be completed and the time of arrival/estimated completion(s) NOT NULL = TextField
+        -Agreement of date the work is to be completed and the time of arrival/estimated completion(s) NOT NULL = TextField
 
-            -Agreement of whatever else I'm not thinking of that is normal for this type of business NOT NULL = FieldField
+        -Agreement of whatever else I'm not thinking of that is normal for this type of business NOT NULL = FieldField
 
 ## Timeline
 
