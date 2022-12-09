@@ -1,0 +1,17 @@
+
+{% extends 'main_template.html' %}
+
+{% block content %}
+
+    <form action="" method="post">
+
+        <h1>Login Screen</h1>
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Login">
+
+    </form>
+{% endblock content %}
