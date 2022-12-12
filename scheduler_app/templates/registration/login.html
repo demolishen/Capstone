@@ -1,17 +1,10 @@
+{% extends 'main_template.html' %} {% block content %}
 
-{% extends 'main_template.html' %}
+<form action="" method="post">
+    <h1 class="login_title">Login Screen</h1>
 
-{% block content %}
+    {% csrf_token %} {{ form.as_p }}
 
-    <form action="" method="post">
-
-        <h1>Login Screen</h1>
-
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
-        <input type="submit" value="Login">
-
-    </form>
+    <input type="submit" value="Login" />
+</form>
 {% endblock content %}

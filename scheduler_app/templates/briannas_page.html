@@ -1,11 +1,25 @@
 {% extends 'main_template.html' %} {% block content %}
 
-<div>
+<div class="jobs_list">
     {% if user.username == "BriannaG" %} {% for user in object_list %} 
-    {{ user.full_name }} {{ user.phone_number }} {{ user.email }} {{ user.location_address }}
-    {{ user.location_zip }} {{ user.location_city }} {{ user.location_country }}
-    {{ user.location_state }} {{ user.date_created }}
-    {{ user.date_work_requested }} {% endfor %} {% endif %}
-</div>
 
+    <div class="card jobs_list" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.full_name }}</h5>
+            
+            <p class="card-text">
+            Phone: {{ user.phone_number }} 
+            Email: {{ user.email }}
+            {{ user.location_address }} 
+            Zip: {{ user.location_zip }} City: {{ user.location_city }}
+            Country: {{ user.location_country }} State: {{ user.location_state }} Date Work Requested: {{ user.date_created }}
+            Day of work: {{ user.date_work_requested }}</p>
+          <a href="#" class="btn btn-primary">In Progress</a>
+        </div>
+      </div>
+    {% endfor %}  {% endif %}
+
+</div>
+<br>
+<br>
 {% endblock %}

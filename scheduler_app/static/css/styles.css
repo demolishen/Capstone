@@ -1,7 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap');
+/* font-family: 'Libre Barcode 39 Extended Text', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=New+Rocker&display=swap');
+/* font-family: 'New Rocker', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
+    color: black;
+}
+
+#background_color_nav{
+    background-color: rgba(42, 46, 42, 0.3);
+}
+
+#background_image{
+    background-image: url( "../img/briannascleaningwebsiteimage2.jpg");
+    background-size: 100vmax;
+    height: 100vh;
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+#logo_left{
+    display: flex;
+    
+}
+
+.business_logo{
+    display: flex;
+    width: 15vw;
+}
+
+.about{
+    display: flex;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: dodgerblue;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: blue;
+    margin-left: 10%;
+}
+
+.nav_input{
+    display: flex;
+    font-size: 75%;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+    align-items: center;
+    margin-right: .25rem;
+    gap: .5rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login_button{
+    font-size: small;
+    margin-right: .5rem;
+}
+
+.signup_button{
+    font-size: x-small;
+    align-items: stretch;
+    margin-right: .5rem;
+}
+
+.display_content{
+    position: relative;
+    height: max-content;
+    text-align: center;
+}
+
+.top_page_title{
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: bold;
+
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+}
+
+.promise_title{
+    text-align: center;
+    margin-top: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+
+}
+
+
+
+.schedule_cleaning_button{
+    font-size: calc(0.25em + 2vw);
+    align-items: center;
+    size-adjust: 30%;
+    margin-top: 10%;
+    height: 5vh;
+    width: 25vw;
+}
+
+.schedule_cleaning_button_div{
+    margin-top: 5rem;
+}
+
+
+#nav_input{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    width: 50vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+#footer_display{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     color: white;
+    bottom: 0rem;
+    width: 100vw;
+}
+
+.footer_display{
+    background-color: rgb(89, 89, 255);
+    display: flex;
+    color: white;
+    position: fixed;
+    font-size: xx-small;
+    bottom: 0rem;
+    height: 1.5rem;
+    width: 100vw;
+    justify-content: right;
+    align-items: stretch;
+}
+
+.footer_logos{
+    display: flex;
+    justify-content: right;
+    height: 3%;
+    width: 3%;
+    margin-right: .25rem;
+    margin-top: 1%;
+}
+
+#facebook_logo{
+    max-width: 100%;
+    height: auto;
+}
+
+#twitter_logo{
+    max-width: 100%;
+    height: auto;
+}
+
+#instagram_logo{
+    max-width: 100%;
+    height: auto;
+}
+
+.jobs_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    
+}
+
+@media only screen and (min-width: 1000px) {
+    .logo_container{
+        height: 2vw;
+    }
+    .business_logo{
+        height: 100%;
+        width: fit-content;
+    }
+    #nav_input{
+        width: 80vw;
+        margin-left: 1rem;
+    }
+    .footer_display{
+        font-size: calc(0.35em + 1vw);
+    }
+    
 }

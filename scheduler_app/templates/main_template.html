@@ -7,48 +7,115 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>Scheduler</title>
         <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     </head>
-    <body>
-        <header>
-            <div>Brianna's Cleaning Business(BCB)"TM"</div>
-            <div>
-                <a>Home</a>
-                <a href="{% url 'scheduler_app:new_job' %}"
-                    >Schedule Cleaning</a
-                >
+    <body id="background_image">
+        <div class="main_content">
+            <nav id="background_color_nav">
+                <div class="logo_container">
+                    <div id="logo_left">
+                        <img class="business_logo" src="{% static 'img/briannascleaningwebsitelogo.jpg' %}"
+                        alt="business_logo">
+                        <div class="logo">
+                            <a href="{% url 'scheduler_app:home' %}">BCB</a>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="nav_input">
+                        <input
+                            id="nav_input"
+                            type="text"
+                            placeholder="Search..."
+                        />
+                    </div>
+                    {% if user.is_authenticated %}
+                    <div class="buttons">
+                        <a
+                            class="atag1"
+                            href="{% url 'users:profile' user.username %}"
+                            >{{ user.username }}</a
+                        >
+                            <a class="logout_button" href="{% url 'logout' %}">
+                                Logout
+                            </a>
+
+                        {% else %}
+                        <div class="buttons">
+                            <a
+                                class="signup_button"
+                                href="{% url 'users:signup' %}"
+                            >
+                                SignUp
+                            </a>
+                            <a class="login_button" href="{% url 'login' %}">
+                                Login
+                            </a>
+                        </div>
+
+                    </div>
+                    {% endif %}
+                </div>
+            </nav>
+            <div class="display_content">
+                <div>
+                    <h1 class="top_page_title">Here to serve you...</h1>
+                </div>
+                <br />
+                <br />
+                <div class="promise_title">
+                    <h2 class="promise_title">
+                        We promise to clean to your satisfaction or your money
+                        back
+                    </h2>
+                </div>
+                <div class="schedule_cleaning_button_div">
+                    <button class="inside_button">
+                        <a
+                            class="schedule_cleaning_button"
+                            href="{% url 'scheduler_app:new_job' %}"
+                        >
+                            Schedule a Cleaning
+                        </a>
+                    </button>
+                </div>
+                {% if user.username == "BriannaG" %}
+
+                    <button>
+                        <a class="show_jobs_button" href="{% url 'scheduler_app:briannas_page' %}">
+                            Show Job Requests
+                        </a>
+                    </button>
+
+                {% endif %}
             </div>
-        </header>
-        <div id="loginDisplay">
-            {% if user.is_authenticated %}
-            <a id="atag1" href="{% url 'users:profile' user.username %}"
-                >User: {{ user.username }}</a
-            >
-
-            <a id="atag2" href="{% url 'logout' %}">LOGOUT!</a>
-
-            {% else %}
-            <a id="atag3" href="{% url 'login' %}">LOGIN!</a>
-            <a id="atag4" href="{% url 'users:signup' %}">Register</a>
-
-            {% endif %}
+            <footer class="footer_display">
+                <div id="footer_display">
+                    <a id="footer_display" href="{% url 'scheduler_app:about' %}">About</a>
+                    <a id="footer_display" href="{% url 'scheduler_app:home' %}">Guidelines</a>
+                    <a id="footer_display" href="{% url 'scheduler_app:home' %}">Jobs</a>
+                    <a id="footer_display" href="{% url 'scheduler_app:home' %}">Terms</a>
+                    <a id="footer_display" href="{% url 'scheduler_app:home' %}">Home</a>
+                    <a id="footer_display" href="{% url 'scheduler_app:home' %}">Developers</a>
+                    <a id="footer_display" href="{% url 'scheduler_app:contact' %}">Contact</a>
+                        <img class="footer_logos" id="facebook_logo" src="{% static 'img/facebook_logo.jpg' %}" alt="facebook logo">
+                        <img class="footer_logos" id="instagram_logo" src="{% static 'img/instagram_logo.jpg' %}" alt="instagram logo">
+                        <img class="footer_logos" id="twitter_logo" src="{% static 'img/twitter_logo.jpg' %}" alt="twitter logo">
+                </div>
+            </div>
+            </footer>
         </div>
-        <div>
-            {% if user.username == "BriannaG" %}
-            <a href="{% url 'scheduler_app:briannas_page' %}"
-                >Click to View Work Requests</a
-            >
-            {% endif %}
-        </div>
-        <!-- Import App -->
-        <script src="{% static 'javascript/script.js' %}"></script>
-
-        <!-- Mount App -->
-        <script>
-            const mountApp = app.mount("#app");
-        </script>
-
-        {% block content %} {% endblock %}
+        
+                {% comment %} <!-- Import App -->
+                <script src="{% static 'javascript/script.js' %}"></script>
+        
+                <!-- Mount App -->
+                <script>
+                    const mountApp = app.mount("#app");
+                </script> {% endcomment %}
+        
+                {% block content %} {% endblock %}
     </body>
 </html>

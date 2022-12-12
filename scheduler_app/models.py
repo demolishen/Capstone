@@ -12,7 +12,7 @@ class ScheduleClean(models.Model):
     location_country = models.CharField(max_length=100)
     location_state = models.CharField(max_length=100)
     date_created = models.DateTimeField(auto_now_add=True)
-    date_work_requested = models.DateTimeField(null=True)
+    date_work_requested = models.CharField(max_length=100, null=True)
     email = models.EmailField(max_length=100)
     in_progress = models.BooleanField(default = False)
     # work_images = models.
