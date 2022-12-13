@@ -23,7 +23,7 @@
     height: 100vh;
     /* background-size: cover; */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .logo_container{
@@ -78,7 +78,10 @@
     margin-left: .25rem;
     font-family: 'Roboto', sans-serif;
 }
-
+.card-body{
+    background-color: rgba(42, 46, 42, 0.3);
+    border-radius: 10%;
+}
 .login_button{
     font-size: small;
     margin-right: .5rem;
@@ -91,7 +94,10 @@
 }
 
 .display_content{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: max-content;
     text-align: center;
 }
@@ -113,19 +119,68 @@
 
 }
 
+.form_style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid blue;
+    border-radius: 18%;
+    background-color:  rgba(42, 46, 42, 0.3);
 
+}
+
+label{
+    color: blue;
+    background-color: aqua;
+    border: 2px solid orange;
+    border-radius: 20%;
+
+}
+
+.form_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form_window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 
 .schedule_cleaning_button{
     font-size: calc(0.25em + 2vw);
     align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
     size-adjust: 30%;
-    margin-top: 10%;
-    height: 5vh;
-    width: 25vw;
+
 }
 
 .schedule_cleaning_button_div{
-    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 3rem;
+    background-color: rgb(128, 128, 128);
+    /* margin-right: 6rem; */
+    /* margin-left: 6rem; */
+    width: 7rem;
+    align-items: center;
+    text-align: center;
+
 }
 
 

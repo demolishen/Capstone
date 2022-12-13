@@ -3,17 +3,38 @@
 <div class="jobs_list">
     {% if user.username == "BriannaG" %} {% for user in object_list %} 
 
-    <div class="card jobs_list" style="width: 18rem;">
+    <div class="card jobs_list bg-transparent" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ user.full_name }}</h5>
             
             <p class="card-text">
-            Phone: {{ user.phone_number }} 
-            Email: {{ user.email }}
+            <label>Phone:</label>
+            {{ user.phone_number }} 
+            <br>
+            <label>Email:</label>
+            {{ user.email }}
+            <br>
+            <label>Address:</label>
             {{ user.location_address }} 
-            Zip: {{ user.location_zip }} City: {{ user.location_city }}
-            Country: {{ user.location_country }} State: {{ user.location_state }} Date Work Requested: {{ user.date_created }}
-            Day of work: {{ user.date_work_requested }}</p>
+            <br>
+            <label>Zip:</label>
+            {{ user.location_zip }}
+            <br>
+            <label>City:</label>
+            {{ user.location_city }}
+            <br>
+            <label>Country:</label>
+            {{ user.location_country }}
+            <br>
+            <label>State:</label>
+            {{ user.location_state }}
+            <br>
+            <label>Date Work Requested:</label>
+            {{ user.date_created }}
+            <br>
+            <label>Day of Work:</label>
+            {{ user.date_work_requested }}
+            </p>
           <a href="#" class="btn btn-primary">In Progress</a>
         </div>
       </div>

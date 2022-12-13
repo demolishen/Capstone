@@ -32,7 +32,7 @@ def contact(request):
 class CreateJob(LoginRequiredMixin, CreateView):
     model = ScheduleClean
     template_name = "schedule_clean.html"
-    fields = ['full_name', 'phone_number', 'location_address', 'location_zip', 'location_city', 'location_state', 'location_country', 'date_work_requested']
+    fields = ['full_name', 'phone_number', 'email', 'location_address', 'location_zip', 'location_city', 'location_state', 'location_country', 'date_work_requested']
 
     def form_valid(self, form):
         form.instance.user = self.request.user

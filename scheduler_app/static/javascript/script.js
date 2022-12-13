@@ -1,11 +1,7 @@
-// const app = Vue.createApp({
-//     data() {
-//         return {};
-//     },
-//     methods: {},
-//     mounted() {
-//         requestAccepted(user){
-
-//         }
-//     },
-// });
+document
+    .querySelector("#enterButton")
+    .addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            document.enterButtonName.submit();
+        }
+    });
